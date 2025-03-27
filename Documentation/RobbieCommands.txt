@@ -1,0 +1,33 @@
+Command				Normal Response				Notes
+-----------------------------------------------------------------------------------------------------------------------
+SHOWMSGS ON/OFF			ACK SHOWMESSAGES ON/OFF			Controls whether socket messages are displayed 
+									in the Robbie console window
+STOP				ACK STOP				Stops the socket on Robbies end. A client 
+									can still reconnect.
+GOTO x y			ACK GOTO x y				Places Robbie at grid cell x,y
+GETLOC				ROBISAT x y				Returns Robbie's current grid location
+FACE UP/DOWN/LEFT/RIGHT		ACK FACE UP/DOWN/LEFT/RIGHT		Faces Robbie in the specified direction
+GETDIR				ROBISFACING UP/DOWN/LEFT/RIGHT		Returns the direction Robbie is facing
+GIVEROB <0..9>			ACK GIVEROB <0..9>			Sets Robbie's gem count to the specified number
+GETJEWELCNT			ROBHAS n				Returns Robbie's jewel count
+SETGRID x y <char>		ACK SETGRID x y <char>			Sets the content of a grid cell .=blank, 
+									X=wall,'0'..'9'=gem count ('0' is also blank)
+GETGRID x y			GRID x y <char>				Gets the content of a grid cell '0'=blank, 
+									'X'=wall, '1'-'9' is a gem count (invalid 
+									coords give 'X')
+CLEARGRID			ACK CLEARGRID				Initializes the grid to no content
+LOADGRID <fname>		ACK LOADGRID <fname>			Loads the grid from a text file, which must be 
+									in the Robbie app working directory.
+GETSIZE				GRIDSIZE w h				Returns the width and height of the grid
+SETSIZE w h			ACK SETSIZE w h				Sets the number of cells in the grid. The cell
+									size will scale accordingly, so going higher
+									than 50 is probably not visibly practical.
+									This also re-initializes the grid.
+CLEARCONSOLE			ACK CLEARCONSOLE			Clears the console window
+PRINT <str>			ACK PRINT <str>				Prints to the console. Use '_' for space.
+PRINTLN <str>			ACK PRINTLN <str>			Prints with linefeed. Use '_' for space.
+
+ERROR RESPONSES
+------------------------------------------------------------------------------------------------------------------------
+				CMDFAIL					Command failed - probably bad params
+				CMDERR					The command was not recognized

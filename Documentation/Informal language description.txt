@@ -1,0 +1,40 @@
+==========================================
+Informal description of the language:
+==========================================
+
+proc defines a procedure. Procedures must be defined before Main in the script file
+a procedure is called using the keyword call.
+ex: 
+	proc foo {step;}
+	main {
+		call foo;
+	}
+
+main defines the main procedure. It needs to be last because the program is an interpreter, not a compiler. It executes the file word by word as it reads it,
+so it needs to see the definition of any procedures first before it can execute them.
+
+The conditionals should be self explanatory: while, if/else 
+There is also do <integer>, which loops through the instructions it contains a number of times equal to the integer it's given.
+
+Primitive instructions:
+
+init grid: loads the environment with a grid defined in a text file (example file might be self-explanatory)
+init gems <integer>: give robbie a gem count of <integer>
+print <string>: prints a string to the output window of the interpreter, NOT the RobbieApp.
+
+
+Robbie Commands(more than one can be included on a single line):
+
+step: step one cell in the direction robbie is facing
+turnR: turns robbie right (clockwise)
+turnL: turn robbie left(counterclockwise)
+take: takes the gems from the adjacent cell in the direction robbie's facing (if the cell contains one or more)
+drop: drops a gem in the adjacent cell in the direction robbie's facing (if robbie has any)
+
+
+Tests (return true or false, used in conditionals):
+seegem: evaluates if robbie is facing an adjacent space that contains a gem
+havegem: evaluates if robbie is holding at least one gem
+facingW: evaluates if robbie is facing west, there is also facingE, facingN, facingS
+leftClear: evaluates if the cell on robbies left is clear of walls (depends on direction he is facing), there is also a rightClear, frontClear, and backClear
+

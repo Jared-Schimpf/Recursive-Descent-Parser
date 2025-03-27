@@ -1,0 +1,48 @@
+/*
+Simple test file that tests some of the functionality
+and edge cases of the language.
+
+Corresponds to Testgrid
+*/
+
+
+proc moveloop {
+	do 5 step drop;
+}
+
+main{
+	init grid TestGrid.grd;
+	init gems 6;
+	drop;
+	drop;
+	
+	//test comment
+	
+	/*
+	test multiline comment
+	*/
+	
+	//test callproc
+	call moveloop;
+	
+	//test multiple commands on 1 line
+	turnR step turnL;
+	
+	//tests while, negation, and tests
+	while !seejem{
+		step;
+	}
+	
+	//test single line if
+	if seejem take;
+	
+	step take step take;
+	
+	//tests nested single line ifs
+	if !seejem if rightclear turnR step turnR;
+	
+	while frontclear{
+		step;
+	}
+	
+}
