@@ -12,7 +12,7 @@ The program is a single pass recursive-descent parser & interpreter that convert
 - [Azul Zulu](https://www.azul.com/downloads/?package=jdk#zulu)
 
 ## Scripting language specifications:
-- The syntactica rules for creating a "robbie instruction language" script are listed within the EBNF document located in the Documentation folder.
+- The syntactical rules for creating a "robbie instruction language" script are listed within the EBNF document located in the Documentation folder.
 - Because the EBNF document is context-free, I have also included a short informal description of the language which gives some context and descriptions to the individual terms.
 
 ## Running the program:
