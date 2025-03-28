@@ -1,5 +1,5 @@
 # Robbie Recursive-Descent-Parser & Interpreter:
-This is a personal project I decided to take on to learn a little more about the how compilers work as well as the concepts that underly high-level languages, and to get a glimpse into the thought process that goes into creating a programming language. The project itself is an interpreter for a small scripting language I created, which is used to control a robot named 'robbie' in a 2D grid environment.
+This is a personal project I decided to take on to learn a little more about the how compilers work as well as the concepts that underly high-level languages and get a glimpse into the thought process that goes into creating one. The project itself is an interpreter for a small scripting language I created, which is used to control a robot named 'robbie' in a 2D grid environment.
 
 ### Description:
 The program is a single pass recursive-descent parser & interpreter that converts scripting language instructions into commands that control a robot in a 2D grid environment. 
